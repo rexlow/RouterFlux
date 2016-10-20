@@ -8,16 +8,13 @@ import {
 
 import { Actions } from 'react-native-router-flux';
 
-export default class Dark extends Component {
+export default class Modal extends Component {
   render() {
     return(
       <View style={styles.container}>
         <Text
           style={styles.title}
-          onPress={() => Actions.light()}>Dark</Text>
-        <Text
-          style={styles.title}
-          onPress={() => Actions.modal()}>Open Modal</Text>
+          onPress={() => Actions.pop()}>Slide To Close Modal</Text>
       </View>
     )
   }
@@ -26,13 +23,12 @@ export default class Dark extends Component {
 const styles = {
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: '#e557ed',
     justifyContent: 'center',
     alignItems: 'center'
   },
   title: {
-    fontSize: 18,
-    color: 'white',
-    padding: 5
+    fontSize: 28,
+    color: 'black'
   }
 }

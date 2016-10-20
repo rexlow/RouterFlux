@@ -17,6 +17,8 @@ import Green from './Green';
 import Red from './Red';
 import Violet from './Violet';
 
+import Modal from './Modal';
+
 const TabIcon = ({ selected, title}) => {
   return(
     <Text style={{color: selected ? 'red' : 'black'}}>{title}</Text>
@@ -72,6 +74,14 @@ export default class App extends Component {
             </Scene>
           </Scene>
 
+          <Scene
+            key="modal"
+            title="Modal"
+            component={Modal}
+            direction="vertical"
+            hideNavBar>
+
+          </Scene>
 
         </Scene>
       </Router>
